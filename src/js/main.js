@@ -20,7 +20,7 @@ import {config} from './utilities/config';
 
 
 //================= import controllers ===========================//
-
+import {LayoutController} from './controllers/layout.controller';
 
 
 
@@ -31,6 +31,6 @@ angular
 
     .module('app', ['ui.router', 'ngMaterial'])
     .config(config)
-    
+    .controller('LayoutController', LayoutController)
 
 ;
