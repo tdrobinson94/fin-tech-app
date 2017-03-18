@@ -6,6 +6,7 @@ function config ($stateProvider, $urlRouterProvider){
     $stateProvider
 
         .state('root', {
+            url: '/',
             templateUrl: 'templates/layout.tpl.html',
             controller: 'LayoutController as vm',
             abstract: true
@@ -18,7 +19,7 @@ function config ($stateProvider, $urlRouterProvider){
 
     //================= designate a home page ===========================//
 
-    $urlRouterProvider.otherwise('/home')
+    $urlRouterProvider.otherwise('/root')
 
 };
 
