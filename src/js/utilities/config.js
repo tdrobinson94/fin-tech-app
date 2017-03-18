@@ -6,10 +6,15 @@ function config ($stateProvider, $urlRouterProvider){
     $stateProvider
 
         .state('root', {
-            url: '/',
             templateUrl: 'templates/layout.tpl.html',
             controller: 'LayoutController as vm',
             abstract: true
+        })
+
+        .state('home', {
+            url: '/home',
+            templateUrl: 'templates/home.tpl.html',
+            controller: 'HomeController as vm'
         })
 
 
@@ -19,7 +24,7 @@ function config ($stateProvider, $urlRouterProvider){
 
     //================= designate a home page ===========================//
 
-    $urlRouterProvider.otherwise('/root')
+    $urlRouterProvider.otherwise('/home')
 
 };
 
